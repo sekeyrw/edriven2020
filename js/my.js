@@ -1,6 +1,7 @@
 var m, d;
 m = prompt("Month 1-12")
 d = prompt("Start Day 1-7")
+hello
 
 function createCalendar(elem, month, dayOfWeek) {
     const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
