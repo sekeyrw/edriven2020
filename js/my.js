@@ -1,7 +1,6 @@
 var m, d;
 m = prompt("Month 1-12")
 d = prompt("Start Day 1-7")
-hello
 
 function createCalendar(elem, month, dayOfWeek) {
     const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -52,22 +51,22 @@ function createCalendar(elem, month, dayOfWeek) {
             data[i] = round[(dayOfWeek + i) % 7]
         }
 
-        if (days[month-1] != 28) {
-            if (days[month-1] == 30) {
-                if(dayOfWeek > 6){
+        if (days[month - 1] != 28) {
+            if (days[month - 1] == 30) {
+                if (dayOfWeek > 6) {
                     for (let i = 0; i < 42; i++) {
                         if (weekendCounter == 0) {
                             table += '<tr>'
                         }
-        
+
                         if (counter <= dayOfWeek - 1) {
                             table += "<td></td>"
                             counter++
                         }
-        
+
                         else if (calendarDays > days[month - 1])
                             table += "<td></td>"
-        
+
                         else {
                             if (calendarDays <= days[month - 1]) {
                                 table += `<td>${calendarDays}</td>`
@@ -76,7 +75,7 @@ function createCalendar(elem, month, dayOfWeek) {
                             else
                                 table += "<td></td>"
                         }
-        
+
                         if (weekendCounter == 6) {
                             table += '</tr>'
                             weekendCounter = 0
@@ -86,20 +85,20 @@ function createCalendar(elem, month, dayOfWeek) {
                         }
                     }
                 }
-                else{
+                else {
                     for (let i = 0; i < 35; i++) {
                         if (weekendCounter == 0) {
                             table += '<tr>'
                         }
-        
+
                         if (counter <= dayOfWeek - 1) {
                             table += "<td></td>"
                             counter++
                         }
-        
+
                         else if (calendarDays > days[month - 1])
                             table += "<td></td>"
-        
+
                         else {
                             if (calendarDays <= days[month - 1]) {
                                 table += `<td>${calendarDays}</td>`
@@ -108,7 +107,7 @@ function createCalendar(elem, month, dayOfWeek) {
                             else
                                 table += "<td></td>"
                         }
-        
+
                         if (weekendCounter == 6) {
                             table += '</tr>'
                             weekendCounter = 0
@@ -119,23 +118,23 @@ function createCalendar(elem, month, dayOfWeek) {
                     }
 
                 }
-               
+
             }
-            else if (days[month-1] == 31){
-                if(dayOfWeek > 5){
+            else if (days[month - 1] == 31) {
+                if (dayOfWeek > 5) {
                     for (let i = 0; i < 42; i++) {
                         if (weekendCounter == 0) {
                             table += '<tr>'
                         }
-        
+
                         if (counter <= dayOfWeek - 1) {
                             table += "<td></td>"
                             counter++
                         }
-        
+
                         else if (calendarDays > days[month - 1])
                             table += "<td></td>"
-        
+
                         else {
                             if (calendarDays <= days[month - 1]) {
                                 table += `<td>${calendarDays}</td>`
@@ -144,7 +143,7 @@ function createCalendar(elem, month, dayOfWeek) {
                             else
                                 table += "<td></td>"
                         }
-        
+
                         if (weekendCounter == 6) {
                             table += '</tr>'
                             weekendCounter = 0
@@ -154,20 +153,20 @@ function createCalendar(elem, month, dayOfWeek) {
                         }
                     }
                 }
-                else{
+                else {
                     for (let i = 0; i < 35; i++) {
                         if (weekendCounter == 0) {
                             table += '<tr>'
                         }
-        
+
                         if (counter <= dayOfWeek - 1) {
                             table += "<td></td>"
                             counter++
                         }
-        
+
                         else if (calendarDays > days[month - 1])
                             table += "<td></td>"
-        
+
                         else {
                             if (calendarDays <= days[month - 1]) {
                                 table += `<td>${calendarDays}</td>`
@@ -176,7 +175,7 @@ function createCalendar(elem, month, dayOfWeek) {
                             else
                                 table += "<td></td>"
                         }
-        
+
                         if (weekendCounter == 6) {
                             table += '</tr>'
                             weekendCounter = 0
@@ -189,21 +188,21 @@ function createCalendar(elem, month, dayOfWeek) {
                 }
             }
         }
-        else{
-            if(dayOfWeek >= 2){
+        else {
+            if (dayOfWeek >= 2) {
                 for (let i = 0; i < 35; i++) {
                     if (weekendCounter == 0) {
                         table += '<tr>'
                     }
-    
+
                     if (counter <= dayOfWeek - 1) {
                         table += "<td></td>"
                         counter++
                     }
-    
+
                     else if (calendarDays > days[month - 1])
                         table += "<td></td>"
-    
+
                     else {
                         if (calendarDays <= days[month - 1]) {
                             table += `<td>${calendarDays}</td>`
@@ -212,7 +211,7 @@ function createCalendar(elem, month, dayOfWeek) {
                         else
                             table += "<td></td>"
                     }
-    
+
                     if (weekendCounter == 6) {
                         table += '</tr>'
                         weekendCounter = 0
@@ -222,20 +221,20 @@ function createCalendar(elem, month, dayOfWeek) {
                     }
                 }
             }
-            else{
+            else {
                 for (let i = 0; i < 28; i++) {
                     if (weekendCounter == 0) {
                         table += '<tr>'
                     }
-    
+
                     if (counter <= dayOfWeek - 1) {
                         table += "<td></td>"
                         counter++
                     }
-    
+
                     else if (calendarDays > days[month - 1])
                         table += "<td></td>"
-    
+
                     else {
                         if (calendarDays <= days[month - 1]) {
                             table += `<td>${calendarDays}</td>`
@@ -244,7 +243,7 @@ function createCalendar(elem, month, dayOfWeek) {
                         else
                             table += "<td></td>"
                     }
-    
+
                     if (weekendCounter == 6) {
                         table += '</tr>'
                         weekendCounter = 0
