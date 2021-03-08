@@ -8,10 +8,21 @@
 </head>
 
 <body>
-    <table id="main">
-        <h1>WELCOME TO CALENDAR GENERATOR</h1>
-    </table>
+    <h1>Preparatory Assessment #3</h1>
+    <br>
+    <form action="#" action="" method="#" id="mainform" name="mainform">
+        <input type="number" id="subtotal" name="subtotal" placeholder="Subtotal" min="100" max="10000" oninput="mainForm()">
+        <label for="subtotal">User input from 100 to 10,000</label><br><br>
+        <input type="number" id="tax" name="tax" placeholder="Tax" value="" disabled>
+        <label for="tax">+12% Tax</label><br><br>
+        <input type="number" id="total" name="total" placeholder="Total" value="" disabled>
+        <label for="tax">Subtotal + Tax</label><br><br>
+        <input type="number" id="amountpaid" name="amountpaid" placeholder="Amount Paid" value="" disabled oninput="changeVal()">
+        <label for="tax">Minimum is base on Subtotal+Tax</label><br><br>
+        <input type="number" id="change" name="change" placeholder="Change" value="" disabled>
+        <label for="tax">Amount Paid - Total</label><br><br>
+      </form>
+      <button id="pay" name="pay" disabled>Pay</button>
 </body>
 <script src="/js/my.js"></script>
-
 </html>
